@@ -7,6 +7,7 @@
     "build": "npm run redirects:enable && remix build",
     "dev": "npm run redirects:disable && remix dev",
     "start": "netlify serve",
+    "postinstall": "prisma generate",
     "typecheck": "tsc -b",
     "redirects:enable": "shx cp .redirects public/_redirects",
     "redirects:disable": "shx rm -f public/_redirects"
